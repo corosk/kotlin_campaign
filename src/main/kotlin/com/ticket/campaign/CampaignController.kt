@@ -27,6 +27,19 @@ class CampaignController(private val campaignRepository: CampaignRepository) {
         return "campaign/index"
     }
 
+    @GetMapping("confirm")
+    fun confirm(form: TicketConfirmForm,
+                model: Model): String {
+        val campaign : Campaign? = campaignRepository.confirm(form.id)
+        return "campaign/index"
+    }
+
+    @GetMapping("list")
+    fun list(model: Model): String {
+        val winning : Winning = campaignRepository.findForWinningNumber()
+        return "campaign/list"
+    }
+
     @ExceptionHandler(NotFoundException::class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     fun handleNotFoundException(): String = "campaing/not_found"

@@ -6,5 +6,9 @@ interface CampaignRepository {
 
     fun update(campaign: Campaign): Campaign
 
+    fun confirm(id: String): Campaign?
+
     fun findById(id: String): Campaign?
+
+    fun findForWinningNumber(): Winning
 }
