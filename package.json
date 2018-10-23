@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "resolve-url-loader": "^2.3.0"
+    "resolve-url-loader": "^2.3.0",
+    "vue-cookies": "^1.5.7"
   }
 }

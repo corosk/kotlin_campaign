@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Vue from 'vue';
 // Ajax通信ライブラリ
 import axios from 'axios';
+// Cookie
+import vueCookies from 'vue-cookies';
 // Json取得のベースURL
 const URL_BASE = '/tasks/search/';
 
@@ -37,6 +39,9 @@ module.exports = new Vue({
                 .catch(function (response) {
                     console.log(response);
                 });
+      },
+      cookie: function(){
+        Vue.use(VueCookies)
       }
     }
 });

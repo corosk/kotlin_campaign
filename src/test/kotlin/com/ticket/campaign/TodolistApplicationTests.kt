@@ -1,3 +1,4 @@
+/*
 package com.ticket.campaign
 
 import org.junit.Test
@@ -14,3 +15,4 @@ class TodolistApplicationTests {
 	}
 
 }
+*/
